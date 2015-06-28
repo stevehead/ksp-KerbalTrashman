@@ -98,7 +98,7 @@ namespace KerbalTrashman
                 {
                     continue;
                 }
-                if (vessel.altitude < vessel.mainBody.atmosphereDepth)
+                if (vessel.orbit.PeA < vessel.mainBody.atmosphereDepth)
                 {
                     Debug.Log(vessel.name + " to be destroyed.");
                     Destroy(vessel);
