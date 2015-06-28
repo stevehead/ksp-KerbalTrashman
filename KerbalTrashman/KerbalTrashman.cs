@@ -80,30 +80,28 @@ namespace KerbalTrashman
         }
 
         /// <summary>
-        /// Method to remove vessels
+        /// Method to remove vessels.
         /// </summary>
         private void RemoveVessels()
         {
-            foreach (Vessel vessel in FlightGlobals.Vessels)
+            foreach (Vessel vessel in QualifyingVessels())
             {
-                if (vessel.vesselType != VesselType.Debris)
-                {
-                    continue;
-                }
-                if (vessel.orbit.eccentricity >= 1.0)
-                {
-                    continue;
-                }
-                if (!vessel.mainBody.atmosphere)
-                {
-                    continue;
-                }
-                if (vessel.orbit.PeA < vessel.mainBody.atmosphereDepth)
-                {
-                    Debug.Log(vessel.name + " to be destroyed.");
-                    Destroy(vessel);
-                }
+                Debug.Log(vessel.name + " to be destroyed.");
+                Destroy(vessel);
             }
+        }
+
+        /// <summary>
+        /// Finds the vessels that qualify for removal.
+        /// </summary>
+        /// <returns>The list of qualifying vessels.</returns>
+        private static List<Vessel> QualifyingVessels()
+        {
+            return FlightGlobals.Vessels.Where(v => v.vesselType != VesselType.Debris)
+                .Where(v => v.orbit.eccentricity >= 1.0)
+                .Where(v => !v.mainBody.atmosphere)
+                .Where(v => v.orbit.PeA < v.mainBody.atmosphereDepth)
+                .ToList();
         }
     }
 }
