@@ -97,9 +97,9 @@ namespace KerbalTrashman
         /// <returns>The list of qualifying vessels.</returns>
         private static List<Vessel> QualifyingVessels()
         {
-            return FlightGlobals.Vessels.Where(v => v.vesselType != VesselType.Debris)
-                .Where(v => v.orbit.eccentricity >= 1.0)
-                .Where(v => !v.mainBody.atmosphere)
+            return FlightGlobals.Vessels.Where(v => v.vesselType == VesselType.Debris)
+                .Where(v => v.orbit.eccentricity < 1.0)
+                .Where(v => v.mainBody.atmosphere)
                 .Where(v => v.orbit.PeA < v.mainBody.atmosphereDepth)
                 .ToList();
         }
