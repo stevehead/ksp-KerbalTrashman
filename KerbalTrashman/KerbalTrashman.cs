@@ -81,7 +81,6 @@ namespace KerbalTrashman
         /// </summary>
         private void OnAppLaunchClick()
         {
-            //RemoveVessels();
             if (confirmWindow == null)
             {
                 confirmWindow = new GameObject("KerbalTrashmanConfirmWindow", typeof(ConfirmWindow));
@@ -92,6 +91,9 @@ namespace KerbalTrashman
             }
         }
 
+        /// <summary>
+        /// Destroys the confirm window object.
+        /// </summary>
         internal static void DestroyConfirmWindow()
         {
             Destroy(confirmWindow);
@@ -101,7 +103,7 @@ namespace KerbalTrashman
         /// <summary>
         /// Allows outside objects to turn the toolbar icon off.
         /// </summary>
-        public static void SetApplauncherButtonFalse()
+        internal static void SetApplauncherButtonFalse()
         {
             if (appLauncherButton != null)
             {
