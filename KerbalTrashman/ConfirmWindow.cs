@@ -124,8 +124,10 @@ namespace KerbalTrashman
                     foreach (Vessel vessel in QualifyingVessels())
                     {
                         Debug.Log(vessel.name + " to be destroyed.");
-                        Destroy(vessel);
+                        SpaceTracking.DestroyObject(vessel);
+                        SpaceTracking.StopTrackingObject(vessel);
                     }
+                    
                     KerbalTrashmanController.SetApplauncherButtonFalse();
                 }
                 if (GUILayout.Button("No", GUILayout.ExpandWidth(true)))
