@@ -144,18 +144,6 @@ namespace KerbalTrashman
         }
 
         /// <summary>
-        /// Method to remove vessels.
-        /// </summary>
-        private void RemoveVessels()
-        {
-            foreach (Vessel vessel in QualifyingVessels())
-            {
-                Debug.Log(vessel.name + " to be destroyed.");
-                Destroy(vessel);
-            }
-        }
-
-        /// <summary>
         /// Finds the vessels that qualify for removal.
         /// </summary>
         /// <returns>The list of qualifying vessels.</returns>
