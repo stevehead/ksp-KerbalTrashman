@@ -9,8 +9,10 @@ A KSP plugin that removes orbital debris that dip below the atmosphere with one 
 ### Removal criteria
 * Object must be classified as *Debris*.
 * Object's orbit must have an eccentricity less than 1 (aka no hyperbolic trajectories).
+* Object must not have an encounter with another body.
 * Object must be in orbit around a planet with an atmosphere.
 * Object's periapsis must dip into the atmosphere.
+* Object must not be crewed.
 
 ### License
 BSD 2-Clause
