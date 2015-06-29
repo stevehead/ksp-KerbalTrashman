@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/default
-	launchID = 1
+	launchID = 4
 	PARAMETERS
 	{
 		preset = Normal
@@ -65,7 +65,7 @@ GAME
 			AutoHireCrews = False
 			MissingCrewsRespawn = True
 			BypassEntryPurchaseAfterResearch = True
-			AllowStockVessels = True
+			AllowStockVessels = False
 			IndestructibleFacilities = False
 			ResourceAbundance = 1
 			ReentryHeatScale = 1
@@ -85,18 +85,23 @@ GAME
 	}
 	SCENARIO
 	{
-		name = ScenarioNewGameIntro
-		scene = 5, 6, 8
-		kscComplete = True
-		editorComplete = True
-		tsComplete = False
-	}
-	SCENARIO
-	{
 		name = ProgressTracking
 		scene = 7, 8, 5
 		Progress
 		{
+			Kerbin
+			{
+				reached = 35.9
+				Orbit
+				{
+					completed = 35.9
+					vessel
+					{
+						name = Kerbin - SubOrbit Test - Dies
+						flag = Squad/Flags/default
+					}
+				}
+			}
 		}
 	}
 	SCENARIO
@@ -281,7 +286,7 @@ GAME
 	{
 		name = ScenarioDiscoverableObjects
 		scene = 7, 8, 5
-		lastSeed = 559298752
+		lastSeed = 44558578
 		sizeCurve
 		{
 			key = 0 0 1.5 1.5
@@ -303,9 +308,9 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.3
-		UT = 3.74
+		UT = 494.910036620901
 		activeVessel = 0
-		mapViewFiltering = 64
+		mapViewFiltering = 65
 		VESSEL
 		{
 			pid = 4570232c95b24ab3a1e0b39a5e46e643
@@ -380,6 +385,918 @@ GAME
 				lifetime = 586354.751586914
 				refTime = 1728000
 				size = 4
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 0ce17d59ce204557b922b5d7184dcbb4
+			name = Kerbin - SubOrbit Test - Dies
+			type = Debris
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 247.730036621095
+			lct = 35.9
+			root = 0
+			lat = 0
+			lon = 301.038198378928
+			alt = 300008.931962401
+			hgt = -1
+			nrm = 0.3381827,0.9410723,0.003950139
+			rot = -0.7040374,-0.0669254,-0.07195087,0.7033318
+			CoM = 0,0,0
+			stg = 1
+			prst = False
+			ref = 3296185856
+			ctrl = False
+			cPch = 
+			cHdg = 
+			cMod = 0
+			ORBIT
+			{
+				SMA = 755000
+				ECC = 0.19205298013245
+				INC = 0
+				LPE = 243.151622038964
+				LAN = 35.7679050715668
+				MNA = 2.03934967783095
+				EPH = 283.630036621095
+				REF = 1
+			}
+			PART
+			{
+				name = fuelTankSmallFlat
+				cid = 4294573048
+				uid = 3296185856
+				mid = 3101012802
+				launchID = 1
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = None, -1
+				attN = None, -1
+				attN = None, -1
+				mass = 0.0625
+				temp = 287.731730924755
+				tempExt = 287.750278759664
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/default
+				rTrf = fuelTankSmallFlat
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 45
+					maxAmount = 45
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 55
+					maxAmount = 55
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 0
+				Gear = True, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 0
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+		}
+		VESSEL
+		{
+			pid = cc2b4ee884f946eabde16a1a38b231a7
+			name = Ast. SCB-962
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 33.7799999999997
+			lct = 33.7799999999997
+			root = 0
+			lat = -0.671471604458742
+			lon = 179.477012191207
+			alt = 13397334017.1946
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.3444266,-0.2464188,-0.7060877,0.5675281
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 13646052073.6964
+				ECC = 0.00640231779335375
+				INC = 0.972969769236762
+				LPE = 322.483124370259
+				LAN = 315.867841114889
+				MNA = 0.703928861871898
+				EPH = 3557577.77414062
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 1180776235
+				mid = 1180776235
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 33.7799999999997
+				lifetime = 1282202.05078125
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 3e99e608bc994fbdbcec1e556d8487f8
+			name = Ast. IQT-090
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 71.6429956054705
+			lct = 71.6429956054705
+			root = 0
+			lat = -0.811512751827914
+			lon = 190.988972528432
+			alt = 15610850052.805
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.3354973,0.3662765,0.8481392,0.1842362
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15010961631.971
+				ECC = 0.0946707177581536
+				INC = 1.12552026825513
+				LPE = 357.656914350803
+				LAN = 324.914325867247
+				MNA = 6.27316147155158
+				EPH = 3629558.83781982
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 613156092
+				mid = 613156092
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 71.6429956054705
+				lifetime = 1294652.30712891
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = b442470ca4f34c8e98b5406f2b87bd39
+			name = Ast. NKU-946
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 88.1232202148455
+			lct = 88.1232202148455
+			root = 0
+			lat = 1.31124377743076
+			lon = 178.554022421741
+			alt = 14305687038.3073
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.3108902,0.6854638,0.3585945,0.5521745
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15239853586.2234
+				ECC = 0.10995660880191
+				INC = 1.31612105188725
+				LPE = 167.18419956106
+				LAN = 83.692435642272
+				MNA = 0.249481905629937
+				EPH = 2270356.69011475
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 965296769
+				mid = 965296769
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 88.1232202148455
+				lifetime = 984363.409423828
+				refTime = 1728000
+				size = 0
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = d9110fa47e444bf8bd7437431215c3bd
+			name = Ast. KEY-505
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 169.706838378908
+			lct = 169.706838378908
+			root = 0
+			lat = -0.0961742447022769
+			lon = 183.687564096981
+			alt = 14360578468.5498
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.09528901,-0.3383564,0.9341643,0.06141773
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14192632285.8153
+				ECC = 0.0458918915474373
+				INC = 0.33170570174152
+				LPE = 330.063579947059
+				LAN = 346.974892264277
+				MNA = 0.340608255082998
+				EPH = 4055719.67021728
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 754714173
+				mid = 754714173
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 169.706838378908
+				lifetime = 1587241.24145508
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 68404b21032049da8348cf2d326dc894
+			name = Ast. ARZ-245
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 263.289113769533
+			lct = 263.289113769533
+			root = 0
+			lat = -0.0371347485536102
+			lon = 182.155429379809
+			alt = 15198892831.0895
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.6016113,-0.7157301,0.199402,0.293314
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 16111723279.4481
+				ECC = 0.161238746240107
+				INC = 0.0595061966136935
+				LPE = 303.264028980975
+				LAN = 323.762469327011
+				MNA = 6.07690146687903
+				EPH = 1804144.42925049
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 852112493
+				mid = 852112493
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 263.289113769533
+				lifetime = 304152.98538208
+				refTime = 1728000
+				size = 1
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 793c62815a6e468da945899644e9d015
+			name = Kerbin - StableOrbit Test - Lives
+			type = Debris
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 3.35999999999694
+			lct = 298.930036621081
+			root = 0
+			lat = 0
+			lon = 297.508254346136
+			alt = 399999.84900175
+			hgt = -1
+			nrm = 0.2107055,0.9775447,0.003121269
+			rot = -0.7010356,-0.09187543,-0.0969226,0.70051
+			CoM = 0,0,0
+			stg = 1
+			prst = False
+			ref = 1001897636
+			ctrl = False
+			cPch = 
+			cHdg = 
+			cMod = 0
+			ORBIT
+			{
+				SMA = 900000
+				ECC = 0
+				INC = 0
+				LPE = 0
+				LAN = 0
+				MNA = 0
+				EPH = 0
+				REF = 1
+			}
+			PART
+			{
+				name = fuelTankSmallFlat
+				cid = 4294573048
+				uid = 1001897636
+				mid = 2745237786
+				launchID = 2
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = None, -1
+				attN = None, -1
+				attN = None, -1
+				mass = 0.0625
+				temp = 287.620866478263
+				tempExt = 287.647421157334
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/default
+				rTrf = fuelTankSmallFlat
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 45
+					maxAmount = 45
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 55
+					maxAmount = 55
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 0
+				Gear = True, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 0
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+		}
+		VESSEL
+		{
+			pid = 91daea1cf79b4b1086dead6dfd76cf43
+			name = Kerbin - Hyperbolic Test - Lives
+			type = Debris
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 5.31999999999516
+			lct = 316.310036621065
+			root = 0
+			lat = 0
+			lon = 294.655212445257
+			alt = 499999.763821283
+			hgt = -1
+			nrm = 0.1623491,0.9867294,0.002800572
+			rot = -0.7010633,-0.09167628,-0.09672358,0.7005357
+			CoM = 0,0,0
+			stg = 1
+			prst = False
+			ref = 2299813426
+			ctrl = False
+			cPch = 
+			cHdg = 
+			cMod = 0
+			ORBIT
+			{
+				SMA = -1220000
+				ECC = 1.5
+				INC = 0
+				LPE = 270.872937668352
+				LAN = 30.0188950362692
+				MNA = 1.55550548149471
+				EPH = 321.63003662106
+				REF = 1
+			}
+			PART
+			{
+				name = fuelTankSmallFlat
+				cid = 4294573048
+				uid = 2299813426
+				mid = 1144668931
+				launchID = 3
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = None, -1
+				attN = None, -1
+				attN = None, -1
+				mass = 0.0625
+				temp = 287.58856592723
+				tempExt = 287.598400175745
+				expt = 0.5
+				state = 0
+				connected = True
+				attached = True
+				flag = Squad/Flags/default
+				rTrf = fuelTankSmallFlat
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 45
+					maxAmount = 45
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 55
+					maxAmount = 55
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 0
+				Gear = True, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 0
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+		}
+		VESSEL
+		{
+			pid = e416f09edbce4496aaecc4108151a612
+			name = Ast. AVW-884
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 448.130036620944
+			lct = 448.130036620944
+			root = 0
+			lat = -0.392135049246997
+			lon = 183.259437123431
+			alt = 14053605275.9129
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.4301059,-0.1782014,-0.140973,0.8737161
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14011269060.1928
+				ECC = 0.0300311280221705
+				INC = 0.578980256496217
+				LPE = 0.0566307463035135
+				LAN = 321.001951176143
+				MNA = 0.122327436319359
+				EPH = 3798471.42105225
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				cid = 0
+				uid = 44558578
+				mid = 44558578
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				tempExt = 0
+				expt = 0.1
+				state = 0
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+				modCost = 0
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 448.130036620944
+				lifetime = 189005.2734375
+				refTime = 1728000
+				size = 3
 			}
 			FLIGHTPLAN
 			{
