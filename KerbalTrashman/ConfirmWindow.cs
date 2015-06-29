@@ -114,7 +114,7 @@ namespace KerbalTrashman
                 int cnt = 1;
                 foreach (Vessel vessel in qualifyingVessels)
                 {
-                    GUILayout.Label("  " + cnt + "." + vessel.name);
+                    GUILayout.Label("  " + cnt + "." + vessel.vesselName);
                     cnt++;
                 }
 
