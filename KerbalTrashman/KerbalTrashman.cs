@@ -30,6 +30,11 @@ namespace KerbalTrashman
         private static ApplicationLauncherButton appLauncherButton = null;
 
         /// <summary>
+        /// The window object that is created.
+        /// </summary>
+        private static GameObject confirmWindow;
+
+        /// <summary>
         /// The scenes the button will be visible in.
         /// </summary>
         private static ApplicationLauncher.AppScenes ScenesApplicationVisibleIn
@@ -76,32 +81,32 @@ namespace KerbalTrashman
         /// </summary>
         private void OnAppLaunchClick()
         {
-            RemoveVessels();
-        }
-
-        /// <summary>
-        /// Method to remove vessels.
-        /// </summary>
-        private void RemoveVessels()
-        {
-            foreach (Vessel vessel in QualifyingVessels())
+            //RemoveVessels();
+            if (confirmWindow == null)
             {
-                Debug.Log(vessel.name + " to be destroyed.");
-                Destroy(vessel);
+                confirmWindow = new GameObject("KerbalTrashmanConfirmWindow", typeof(ConfirmWindow));
+            }
+            else
+            {
+                DestroyConfirmWindow();
             }
         }
 
-        /// <summary>
-        /// Finds the vessels that qualify for removal.
-        /// </summary>
-        /// <returns>The list of qualifying vessels.</returns>
-        private static List<Vessel> QualifyingVessels()
+        internal static void DestroyConfirmWindow()
         {
-            return FlightGlobals.Vessels.Where(v => v.vesselType == VesselType.Debris)
-                .Where(v => v.orbit.eccentricity < 1.0)
-                .Where(v => v.mainBody.atmosphere)
-                .Where(v => v.orbit.PeA < v.mainBody.atmosphereDepth)
-                .ToList();
+            Destroy(confirmWindow);
+            confirmWindow = null;
+        }
+
+        /// <summary>
+        /// Allows outside objects to turn the toolbar icon off.
+        /// </summary>
+        public static void SetApplauncherButtonFalse()
+        {
+            if (appLauncherButton != null)
+            {
+                appLauncherButton.SetFalse();
+            }
         }
     }
 }
