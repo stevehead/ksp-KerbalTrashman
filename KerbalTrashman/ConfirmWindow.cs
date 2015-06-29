@@ -123,7 +123,7 @@ namespace KerbalTrashman
                 {
                     foreach (Vessel vessel in QualifyingVessels())
                     {
-                        Debug.Log(vessel.name + " to be destroyed.");
+                        Debug.LogWarning(KerbalTrashmanController.PluginName + " :: " + vessel.name + " to be destroyed.");
                         SpaceTracking.DestroyObject(vessel);
                         SpaceTracking.StopTrackingObject(vessel);
                     }
@@ -151,6 +151,7 @@ namespace KerbalTrashman
         {
             return FlightGlobals.Vessels.Where(v => v.vesselType == VesselType.Debris)
                 .Where(v => v.orbit.eccentricity < 1.0)
+                .Where(v => v.orbit.closestEncounterLevel == Orbit.EncounterSolutionLevel.NONE)
                 .Where(v => v.mainBody.atmosphere)
                 .Where(v => v.orbit.PeA < v.mainBody.atmosphereDepth)
                 .ToList();
