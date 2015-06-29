@@ -151,9 +151,10 @@ namespace KerbalTrashman
         {
             return FlightGlobals.Vessels.Where(v => v.vesselType == VesselType.Debris)
                 .Where(v => v.orbit.eccentricity < 1.0)
-                .Where(v => v.orbit.closestEncounterLevel == Orbit.EncounterSolutionLevel.NONE)
                 .Where(v => v.mainBody.atmosphere)
                 .Where(v => v.orbit.PeA < v.mainBody.atmosphereDepth)
+                .Where(v => v.orbit.closestEncounterLevel == Orbit.EncounterSolutionLevel.NONE)
+                .Where(v => v.protoVessel.protoPartSnapshots.Sum(pps => pps.protoModuleCrew.Count) == 0)
                 .ToList();
         }
     }
